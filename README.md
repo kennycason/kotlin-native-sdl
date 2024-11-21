@@ -1,4 +1,4 @@
-# Kotlin Native SDL
+# Kotlin Native + SDL Demo
  
 `SDLDemo.kt`
 
