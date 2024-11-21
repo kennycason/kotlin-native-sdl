@@ -40,6 +40,16 @@ kotlin {
         }
     }
 
+    targets {
+        all {
+            compilations.all {
+                kotlinOptions {
+                    freeCompilerArgs += "-opt-in=kotlinx.cinterop.ExperimentalForeignApi"
+                }
+            }
+        }
+    }
+
     sourceSets {
         val nativeMain by getting {
             dependencies {

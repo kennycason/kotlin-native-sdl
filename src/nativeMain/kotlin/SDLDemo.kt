@@ -2,7 +2,6 @@ import kotlinx.cinterop.*
 import platform.posix.exit
 import sdl2.*
 
-@OptIn(ExperimentalForeignApi::class)
 fun main() {
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         println("Error initializing SDL: ${SDL_GetError()?.toKString()}")
@@ -80,7 +79,6 @@ fun main() {
 }
 
 // TODO where did this wrapper go? I recall this being in SDL before...
-@OptIn(ExperimentalForeignApi::class)
 fun SDL_LoadBMP(filePath: String): CPointer<SDL_Surface>? {
     memScoped {
         val file = SDL_RWFromFile(filePath, "rb") ?: return null

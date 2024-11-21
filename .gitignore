@@ -16,4 +16,5 @@ core/out/*
 classes/
 build/
 .gradle/*
+.kotlin/metadata/kotlinCInteropLibraries/
 
